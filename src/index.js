@@ -8,8 +8,11 @@ form.addEventListener('submit', async(e) =>{
     const cityName = document.getElementById('city');
     const location = cityName.value;
     const data = await fetchApi(location);
-    console.log(data);
-    extractCurrentData(data);
-    extractFifteenDaysData(data);
+    if(data){
+        extractCurrentData(data);
+        extractFifteenDaysData(data);
+    }
+    else alert('No such city found');
+    
     form.reset();
 })

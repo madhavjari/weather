@@ -1,5 +1,6 @@
-export function currCondition(condition,dateTime,description,feelsLike,snow,sunrise,sunset,temp,windSpeed,cloudCover){
-    return {condition,
+export function currCondition(address,condition,dateTime,description,feelsLike,snow,sunrise,sunset,temp,windSpeed,cloudCover){
+    return {address,
+            condition,
             dateTime,
             description,
             feelsLike,

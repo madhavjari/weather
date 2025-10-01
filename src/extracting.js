@@ -1,10 +1,8 @@
 import fetchApi from "./fetch";
 import { currCondition, daysCondition,hoursCondition } from "./objects";
 
-// const data = await fetchApi('surat');
-// console.log(data);
-
 export async function extractCurrentData(data){
+    const address = await data.address;
     const current = await data.currentConditions;
     const condition = await current.conditions;
     const dateTime = await current.datetime;
@@ -16,7 +14,7 @@ export async function extractCurrentData(data){
     const temp = await current.temp;
     const windSpeed = await current.windspeed;
     const cloudCover = await current.cloudcover;
-    const currConditions = currCondition(condition,dateTime,description
+    const currConditions = currCondition(address,condition,dateTime,description
                                         ,feelsLike,snow,sunrise,
                                          sunset,temp,
                                         windSpeed,cloudCover);
