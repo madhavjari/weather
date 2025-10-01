@@ -1,19 +1,15 @@
-const apiKey = '5JMTCTA9S9ETG6LGGPETLMZAK';
+import { extractCurrentData, extractFifteenDaysData} from "./extracting";
+import fetchApi from "./fetch";
 
-async function fetchApi(location = 'surat'){
-    try{
-        const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(location)}?unitGroup=metric&contentType=json&key=${apiKey}`);
-        const data = await response.json();
-        console.log(data);
-        console.log(data.resolvedAddress);
-        return data;
-    }
-    catch{
-        throw Error ('No such city');
-    }
-}
+const form = document.querySelector('form');
 
-fetchApi();
-
-
-
+form.addEventListener('submit', async(e) =>{
+    e.preventDefault();
+    const cityName = document.getElementById('city');
+    const location = cityName.value;
+    const data = await fetchApi(location);
+    console.log(data);
+    extractCurrentData(data);
+    extractFifteenDaysData(data);
+    form.reset();
+})
