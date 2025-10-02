@@ -1,4 +1,4 @@
-const apiKey = '5JMTCTA9S9ETG6LGGPETLMZAK';
+//const apiKey = '5JMTCTA9S9ETG6LGGPETLMZAK';
 
 export default async function fetchApi(location){
     try{

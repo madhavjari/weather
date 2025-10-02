@@ -1,5 +1,6 @@
 import { extractCurrentData, extractFifteenDaysData} from "./extracting";
 import fetchApi from "./fetch";
+import './style.css';
 
 const form = document.querySelector('form');
 

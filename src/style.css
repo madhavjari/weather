@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin:0;
+}
+
+.main-container{
+    background-image: url(../img/background.png);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header{
+    margin-left: 5rem;
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 0.2rem;
+}
+
+form{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+label,button{
+    font-size: 1.5rem;
+}
+
+input{
+    border: none;
+    border-radius: 0.5rem;
+    height: 1.5rem;
+    width: 25rem;
+    padding-left: 0.7rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.2rem;
+    color: rgb(68, 68, 168);
+}
+
+input:focus{
+    outline:none;
+}
+
+button{
+    border: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 4rem;
+    cursor: pointer;
+    background: inherit;
+}
+
+button:hover{
+    color: rgb(68, 68, 168);
+}
+
+#logo{
+    width: 2rem;
+    height: 2rem;
+}
+
+h1,label,button{
+    color:white;
+}

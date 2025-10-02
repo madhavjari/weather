@@ -1,4 +1,3 @@
-import fetchApi from "./fetch";
 import { currCondition, daysCondition,hoursCondition } from "./objects";
 
 export async function extractCurrentData(data){
