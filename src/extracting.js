@@ -1,6 +1,7 @@
 import { currCondition, daysCondition,hoursCondition } from "./objects";
 
 export async function extractCurrentData(data){
+
     const address = await data.address;
     const current = await data.currentConditions;
     const condition = await current.conditions;
@@ -17,7 +18,7 @@ export async function extractCurrentData(data){
                                         ,feelsLike,snow,sunrise,
                                          sunset,temp,
                                         windSpeed,cloudCover);
-    console.log(currConditions);
+    //console.log(currConditions);
     return currConditions;
 }
 let dayCondition = [];
