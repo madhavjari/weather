@@ -1,4 +1,4 @@
-export function currCondition(address,condition,dateTime,description,feelsLike,snow,sunrise,sunset,temp,windSpeed,cloudCover){
+export function currCondition(address,condition,dateTime,description,feelsLike,snow,sunrise,sunset,temp,icon,windSpeed,cloudCover){
     return {address,
             condition,
             dateTime,
@@ -8,6 +8,7 @@ export function currCondition(address,condition,dateTime,description,feelsLike,s
             sunrise,
             sunset,
             temp,
+            icon,
             windSpeed,
             cloudCover};
 }

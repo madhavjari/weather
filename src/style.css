@@ -79,7 +79,7 @@ article{
 
 .card{
     display: grid;
-    width: 60vw;
+    width: 40vw;
     grid-template-columns: repeat(2,1fr);
     gap: 0.2rem;
     border-radius: 0.5rem;
@@ -93,4 +93,28 @@ article{
     display: flex;
     justify-content: space-between;
     box-shadow: 0 1px 0 0 rgb(148, 146, 146);
+}
+
+.curr-main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.curr-main > img{
+    grid-row: 1/3;
+}
+
+.curr-main > div{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.curr-main > div+div{
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.curr-main > div+div+div{
+    font-weight: bold;
+    padding: 0.5rem;
 }

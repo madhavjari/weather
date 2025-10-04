@@ -12,13 +12,14 @@ export async function extractCurrentData(data){
     const sunrise = await current.sunrise;
     const sunset = await current.sunset;
     const temp = await current.temp;
+    const icon = await current.icon;
     const windSpeed = await current.windspeed;
     const cloudCover = await current.cloudcover;
     const currConditions = currCondition(address,condition,dateTime,description
                                         ,feelsLike,snow,sunrise,
-                                         sunset,temp,
+                                         sunset,temp,icon,
                                         windSpeed,cloudCover);
-    //console.log(currConditions);
+    console.log(currConditions);
     return currConditions;
 }
 let dayCondition = [];
