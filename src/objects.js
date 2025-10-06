@@ -14,13 +14,14 @@ export function currCondition(address,condition,dateTime,description,feelsLike,s
 }
 
 export function daysCondition(condition,dateTime,description,
-                                feelsLike,hours,snow,sunrise,sunset,temp,windSpeed,
+                                feelsLike,hours,icon,snow,sunrise,sunset,temp,windSpeed,
                                 cloudCover,tempMax,tempMin){
     return {condition,
             dateTime,
             description,
             feelsLike,
             hours,
+            icon,
             snow,
             sunrise,
             sunset,

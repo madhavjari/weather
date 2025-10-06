@@ -2,7 +2,7 @@ import { currCondition, daysCondition,hoursCondition } from "./objects";
 
 export async function extractCurrentData(data){
 
-    const address = await data.address;
+    const address = await data.resolvedAddress;
     const current = await data.currentConditions;
     const condition = await current.conditions;
     const dateTime = await current.datetime;
@@ -32,6 +32,7 @@ export async function extractFifteenDaysData(data){
         const description = await days.description;
         const feelsLike = await days.feelslike;
         const hours = await extracthourlyData(days);
+        const icon = await days.icon;
         const snow = await days.snow;
         const sunrise = await days.sunrise;
         const sunset = await days.sunset;
@@ -41,7 +42,7 @@ export async function extractFifteenDaysData(data){
         const tempMax = await days.tempmax;
         const tempMin = await days.tempmin;
         dayCondition[i] = daysCondition(condition,dateTime,description,
-                                feelsLike,hours,snow,sunrise,sunset,temp,windSpeed,
+                                feelsLike,hours,icon,snow,sunrise,sunset,temp,windSpeed,
                                 cloudCover,tempMax,tempMin)
     }
     console.log("condition",dayCondition);
